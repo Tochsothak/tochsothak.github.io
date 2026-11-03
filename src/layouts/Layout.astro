@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Toch Sothak — Backend & Mobile Developer' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Toch Sothak — Backend & Mobile Developer in Phnom Penh, Cambodia. PHP backend APIs and Flutter mobile apps."
+    />
+    <title>{title}</title>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <slot />
+  </body>
+</html>

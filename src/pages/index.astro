@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Nav -->
+  <header class="sticky top-0 z-10 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
+      <a href="#" class="text-lg font-bold tracking-wide text-blue-900">TOCH SOTHAK</a>
+      <nav class="flex gap-5 text-sm font-medium text-slate-600">
+        <a href="#experience" class="hover:text-blue-900">Experience</a>
+        <a href="#projects" class="hover:text-blue-900">Projects</a>
+        <a href="#skills" class="hover:text-blue-900">Skills</a>
+        <a href="#contact" class="hover:text-blue-900">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-4xl px-5">
+    <!-- Hero -->
+    <section class="flex flex-col items-start gap-8 py-14 sm:flex-row sm:items-center">
+      <div class="flex-1">
+        <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-900">
+          Phnom Penh, Cambodia
+        </p>
+        <h1 class="mb-3 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
+          Toch Sothak
+        </h1>
+        <p class="mb-4 text-xl text-slate-600">Backend &amp; Mobile Developer</p>
+        <p class="mb-6 max-w-xl leading-relaxed text-slate-600">
+          I build PHP backend APIs and Flutter mobile apps in production — currently at
+          Maxx Business Software, working across HRMS, e-commerce, POS, social and ERP
+          products.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="mailto:tochsothak82@gmail.com"
+            class="rounded-lg bg-blue-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+          >
+            Get in touch
+          </a>
+          <a
+            href="/Toch-Sothak-CV.pdf"
+            class="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-blue-900 hover:text-blue-900"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+      <img
+        src="/photo.jpg"
+        alt="Portrait of Toch Sothak"
+        class="w-44 shrink-0 rounded-2xl border border-slate-200 object-cover shadow-sm sm:w-52"
+      />
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="border-t border-slate-200 py-12">
+      <h2 class="mb-6 text-2xl font-bold text-slate-900">Experience</h2>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="text-lg font-bold text-slate-900">Backend &amp; Mobile Developer</h3>
+          <span class="text-sm text-slate-500">Nov 2025 – Present</span>
+        </div>
+        <p class="mb-4 text-sm text-slate-500">
+          Maxx Business Software, Phnom Penh — joined as a PHP backend developer; completed
+          a 3-month internship and a 3-month probation period, now full-time staff.
+        </p>
+        <ul class="list-disc space-y-2 pl-5 leading-relaxed text-slate-600">
+          <li>Build and maintain PHP backend APIs that power web and mobile applications.</li>
+          <li>
+            Develop Flutter mobile apps, from API integration through to UAT and production
+            release builds.
+          </li>
+          <li>
+            Contribute to ESS Online and ESS MJQE (HRMS employee self-service: attendance,
+            leave, overtime, timesheets), Moow Online (Facebook live-selling and shop app
+            with POS and inventory), Maxx POS Order, FlipFlop social media, and ERP modules.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="border-t border-slate-200 py-12">
+      <h2 class="mb-6 text-2xl font-bold text-slate-900">Projects</h2>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="mb-1 text-lg font-bold text-slate-900">SmartExpense</h3>
+          <p class="mb-3 text-sm font-medium text-blue-900">Graduation Project · Flutter + Laravel API</p>
+          <p class="leading-relaxed text-slate-600">
+            Personal finance tracker with multi-account balances, multi-currency support
+            with real-time exchange rates, OTP email login, role-based accounts, expense
+            reporting, Hive offline caching and dynamic charts.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="mb-1 text-lg font-bold text-slate-900">MyStore App</h3>
+          <p class="mb-3 text-sm font-medium text-blue-900">Flutter + Express.js + MongoDB</p>
+          <p class="leading-relaxed text-slate-600">
+            E-commerce app with a responsive UI, real-time product updates and Provider
+            state management.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="mb-1 text-lg font-bold text-slate-900">Phoneshop</h3>
+          <p class="mb-3 text-sm font-medium text-blue-900">Spring Boot + Thymeleaf</p>
+          <p class="leading-relaxed text-slate-600">
+            Web app managing phones, orders, categories and customer reviews.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="mb-1 text-lg font-bold text-slate-900">More academic work</h3>
+          <p class="mb-3 text-sm font-medium text-blue-900">React.js / JavaScript / Unity</p>
+          <p class="leading-relaxed text-slate-600">
+            Gym App, NASA API app, Weather Forecast, Quote Generator, a Unity 2D platformer
+            game, and a To-Do list app.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="border-t border-slate-200 py-12">
+      <h2 class="mb-6 text-2xl font-bold text-slate-900">Skills</h2>
+      <div class="flex flex-wrap gap-2.5">
+        {
+          ['PHP', 'Laravel', 'Dart', 'Flutter', 'SQL', 'MySQL', 'AI-assisted development'].map(
+            (skill) => (
+              <span class="rounded-full border border-blue-900/20 bg-blue-900/5 px-4 py-1.5 text-sm font-medium text-blue-900">
+                {skill}
+              </span>
+            ),
+          )
+        }
+      </div>
+      <p class="mt-6 leading-relaxed text-slate-600">
+        <span class="font-semibold text-slate-800">Education:</span> IT Academy STEP Cambodia —
+        Diploma &amp; Associate Degree in Software Development (Mar 2022 – Sep 2025), final
+        grade 10 (Excellent). <span class="font-semibold text-slate-800">Certifications:</span>
+        AWS Cloud 101, IT Essentials (Cisco). <span class="font-semibold text-slate-800">Languages:</span>
+        Khmer (Native), English (Intermediate).
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="border-t border-slate-200 py-12">
+      <h2 class="mb-4 text-2xl font-bold text-slate-900">Contact</h2>
+      <p class="mb-6 leading-relaxed text-slate-600">
+        Open to junior backend / mobile developer roles and freelance work. The fastest way
+        to reach me is email.
+      </p>
+      <a
+        href="mailto:tochsothak82@gmail.com"
+        class="rounded-lg bg-blue-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+      >
+        tochsothak82@gmail.com
+      </a>
+    </section>
+
+    <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-400">
+      © Toch Sothak — Built with Astro &amp; Tailwind CSS
+    </footer>
+  </main>
+</Layout>
