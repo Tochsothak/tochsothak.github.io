@@ -3,70 +3,121 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <!-- Nav -->
-  <header class="sticky top-0 z-10 border-b border-slate-200 bg-white/90 backdrop-blur">
-    <div class="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-      <a href="#" class="text-lg font-bold tracking-wide text-blue-900">TOCH SOTHAK</a>
-      <nav class="flex gap-5 text-sm font-medium text-slate-600">
-        <a href="#experience" class="hover:text-blue-900">Experience</a>
-        <a href="#projects" class="hover:text-blue-900">Projects</a>
-        <a href="#skills" class="hover:text-blue-900">Skills</a>
-        <a href="#contact" class="hover:text-blue-900">Contact</a>
+  <!-- Glass nav -->
+  <header class="fixed inset-x-0 top-0 z-20 border-b border-white/40 bg-white/70 backdrop-blur-lg">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
+      <a href="#" class="text-lg font-extrabold tracking-wide text-blue-950">TOCH SOTHAK</a>
+      <nav class="hidden gap-6 text-sm font-medium text-slate-600 sm:flex">
+        <a href="#experience" class="transition hover:text-blue-700">Experience</a>
+        <a href="#projects" class="transition hover:text-blue-700">Projects</a>
+        <a href="#skills" class="transition hover:text-blue-700">Skills</a>
+        <a href="#contact" class="transition hover:text-blue-700">Contact</a>
       </nav>
+      <a
+        href="mailto:tochsothak82@gmail.com"
+        class="rounded-full bg-blue-900 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-blue-900/20 transition hover:scale-105 hover:bg-blue-800"
+      >
+        Hire me
+      </a>
     </div>
   </header>
 
-  <main class="mx-auto max-w-4xl px-5">
+  <main>
     <!-- Hero -->
-    <section class="flex flex-col items-start gap-8 py-14 sm:flex-row sm:items-center">
-      <div class="flex-1">
-        <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-900">
-          Phnom Penh, Cambodia
-        </p>
-        <h1 class="mb-3 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
-          Toch Sothak
-        </h1>
-        <p class="mb-4 text-xl text-slate-600">Backend &amp; Mobile Developer</p>
-        <p class="mb-6 max-w-xl leading-relaxed text-slate-600">
-          I build PHP backend APIs and Flutter mobile apps in production — currently at
-          Maxx Business Software, working across HRMS, e-commerce, POS, social and ERP
-          products.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a
-            href="mailto:tochsothak82@gmail.com"
-            class="rounded-lg bg-blue-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+    <section class="relative overflow-hidden bg-gradient-to-b from-blue-50 via-white to-white">
+      <div
+        class="animate-blob pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-blue-300/40 blur-3xl"
+      ></div>
+      <div
+        class="animate-blob pointer-events-none absolute top-40 -right-24 h-96 w-96 rounded-full bg-cyan-300/40 blur-3xl"
+        style="animation-delay: -6s"
+      ></div>
+
+      <div
+        class="relative mx-auto flex max-w-5xl flex-col items-start gap-10 px-5 pt-32 pb-20 sm:flex-row sm:items-center"
+      >
+        <div class="flex-1">
+          <p
+            class="animate-fade-up mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-4 py-1.5 text-xs font-semibold tracking-wide text-blue-900 uppercase shadow-sm"
           >
-            Get in touch
-          </a>
-          <a
-            href="/Toch-Sothak-CV.pdf"
-            class="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-blue-900 hover:text-blue-900"
+            <span class="relative flex h-2 w-2">
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"
+              ></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+            </span>
+            Backend &amp; Mobile Developer · Phnom Penh
+          </p>
+          <h1
+            class="animate-fade-up-delay-1 mb-4 text-5xl leading-[1.05] font-extrabold tracking-tight text-slate-900 sm:text-6xl"
           >
-            Download CV
-          </a>
+            Hi, I'm <span class="gradient-text">Toch Sothak</span>
+          </h1>
+          <p class="animate-fade-up-delay-2 mb-8 max-w-xl text-lg leading-relaxed text-slate-600">
+            I build PHP backend APIs and Flutter mobile apps in production — currently at
+            Maxx Business Software, working across HRMS, e-commerce, POS, social and ERP
+            products.
+          </p>
+          <div class="animate-fade-up-delay-2 flex flex-wrap gap-3">
+            <a
+              href="mailto:tochsothak82@gmail.com"
+              class="rounded-full bg-blue-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:scale-105 hover:bg-blue-800"
+            >
+              Get in touch →
+            </a>
+            <a
+              href={import.meta.env.BASE_URL + 'Toch-Sothak-CV.pdf'}
+              class="rounded-full border border-slate-300 bg-white/80 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur transition hover:scale-105 hover:border-blue-900 hover:text-blue-900"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <div class="animate-fade-up-delay-1 relative shrink-0">
+          <div
+            class="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-blue-600 via-cyan-400 to-blue-300 opacity-70 blur-lg"
+          ></div>
+          <img
+            src={import.meta.env.BASE_URL + 'photo.jpg'}
+            alt="Portrait of Toch Sothak"
+            class="relative w-56 rounded-[1.75rem] border-4 border-white object-cover shadow-2xl sm:w-64"
+          />
+          <span
+            class="animate-float-slow absolute -bottom-4 -left-6 rounded-full bg-white px-4 py-2 text-xs font-bold text-blue-900 shadow-lg"
+          >
+            PHP · Laravel
+          </span>
+          <span
+            class="animate-float-slow absolute -top-4 -right-4 rounded-full bg-slate-900 px-4 py-2 text-xs font-bold text-white shadow-lg"
+            style="animation-delay: -2.5s"
+          >
+            Flutter
+          </span>
         </div>
       </div>
-      <img
-        src="/photo.jpg"
-        alt="Portrait of Toch Sothak"
-        class="w-44 shrink-0 rounded-2xl border border-slate-200 object-cover shadow-sm sm:w-52"
-      />
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="border-t border-slate-200 py-12">
-      <h2 class="mb-6 text-2xl font-bold text-slate-900">Experience</h2>
-      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+    <section id="experience" class="reveal mx-auto max-w-5xl scroll-mt-24 px-5 py-16">
+      <p class="mb-2 text-sm font-bold tracking-widest text-blue-700 uppercase">Career</p>
+      <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-slate-900">Experience</h2>
+      <div
+        class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8"
+      >
         <div class="flex flex-wrap items-baseline justify-between gap-2">
-          <h3 class="text-lg font-bold text-slate-900">Backend &amp; Mobile Developer</h3>
-          <span class="text-sm text-slate-500">Nov 2025 – Present</span>
+          <h3 class="text-xl font-bold text-slate-900">Backend &amp; Mobile Developer</h3>
+          <span
+            class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-900"
+          >
+            Nov 2025 – Present
+          </span>
         </div>
-        <p class="mb-4 text-sm text-slate-500">
+        <p class="mt-1 mb-5 text-sm text-slate-500">
           Maxx Business Software, Phnom Penh — joined as a PHP backend developer; completed
           a 3-month internship and a 3-month probation period, now full-time staff.
         </p>
-        <ul class="list-disc space-y-2 pl-5 leading-relaxed text-slate-600">
+        <ul class="list-disc space-y-2.5 pl-5 leading-relaxed text-slate-600">
           <li>Build and maintain PHP backend APIs that power web and mobile applications.</li>
           <li>
             Develop Flutter mobile apps, from API integration through to UAT and production
@@ -82,36 +133,57 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="border-t border-slate-200 py-12">
-      <h2 class="mb-6 text-2xl font-bold text-slate-900">Projects</h2>
+    <section id="projects" class="reveal mx-auto max-w-5xl scroll-mt-24 px-5 py-16">
+      <p class="mb-2 text-sm font-bold tracking-widest text-blue-700 uppercase">Selected work</p>
+      <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-slate-900">Projects</h2>
       <div class="grid gap-5 sm:grid-cols-2">
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
           <h3 class="mb-1 text-lg font-bold text-slate-900">SmartExpense</h3>
-          <p class="mb-3 text-sm font-medium text-blue-900">Graduation Project · Flutter + Laravel API</p>
+          <p class="mb-3 text-sm font-medium text-blue-800">Graduation Project · Flutter + Laravel API</p>
           <p class="leading-relaxed text-slate-600">
             Personal finance tracker with multi-account balances, multi-currency support
             with real-time exchange rates, OTP email login, role-based accounts, expense
             reporting, Hive offline caching and dynamic charts.
           </p>
         </article>
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
           <h3 class="mb-1 text-lg font-bold text-slate-900">MyStore App</h3>
-          <p class="mb-3 text-sm font-medium text-blue-900">Flutter + Express.js + MongoDB</p>
+          <p class="mb-3 text-sm font-medium text-blue-800">Flutter + Express.js + MongoDB</p>
           <p class="leading-relaxed text-slate-600">
             E-commerce app with a responsive UI, real-time product updates and Provider
             state management.
           </p>
         </article>
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
           <h3 class="mb-1 text-lg font-bold text-slate-900">Phoneshop</h3>
-          <p class="mb-3 text-sm font-medium text-blue-900">Spring Boot + Thymeleaf</p>
+          <p class="mb-3 text-sm font-medium text-blue-800">Spring Boot + Thymeleaf</p>
           <p class="leading-relaxed text-slate-600">
             Web app managing phones, orders, categories and customer reviews.
           </p>
         </article>
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
           <h3 class="mb-1 text-lg font-bold text-slate-900">More academic work</h3>
-          <p class="mb-3 text-sm font-medium text-blue-900">React.js / JavaScript / Unity</p>
+          <p class="mb-3 text-sm font-medium text-blue-800">React.js / JavaScript / Unity</p>
           <p class="leading-relaxed text-slate-600">
             Gym App, NASA API app, Weather Forecast, Quote Generator, a Unity 2D platformer
             game, and a To-Do list app.
@@ -121,20 +193,21 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="border-t border-slate-200 py-12">
-      <h2 class="mb-6 text-2xl font-bold text-slate-900">Skills</h2>
-      <div class="flex flex-wrap gap-2.5">
+    <section id="skills" class="reveal mx-auto max-w-5xl scroll-mt-24 px-5 py-16">
+      <p class="mb-2 text-sm font-bold tracking-widest text-blue-700 uppercase">What I work with</p>
+      <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-slate-900">Skills</h2>
+      <div class="flex flex-wrap gap-3">
         {
           ['PHP', 'Laravel', 'Dart', 'Flutter', 'SQL', 'MySQL', 'AI-assisted development'].map(
             (skill) => (
-              <span class="rounded-full border border-blue-900/20 bg-blue-900/5 px-4 py-1.5 text-sm font-medium text-blue-900">
+              <span class="cursor-default rounded-full border border-blue-100 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-600 hover:text-blue-900 hover:shadow-md">
                 {skill}
               </span>
             ),
           )
         }
       </div>
-      <p class="mt-6 leading-relaxed text-slate-600">
+      <p class="mt-8 leading-relaxed text-slate-600">
         <span class="font-semibold text-slate-800">Education:</span> IT Academy STEP Cambodia —
         Diploma &amp; Associate Degree in Software Development (Mar 2022 – Sep 2025), final
         grade 10 (Excellent). <span class="font-semibold text-slate-800">Certifications:</span>
@@ -143,23 +216,46 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="border-t border-slate-200 py-12">
-      <h2 class="mb-4 text-2xl font-bold text-slate-900">Contact</h2>
-      <p class="mb-6 leading-relaxed text-slate-600">
-        Open to junior backend / mobile developer roles and freelance work. The fastest way
-        to reach me is email.
-      </p>
-      <a
-        href="mailto:tochsothak82@gmail.com"
-        class="rounded-lg bg-blue-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+    <!-- Contact CTA -->
+    <section id="contact" class="reveal mx-auto max-w-5xl scroll-mt-24 px-5 pb-20">
+      <div
+        class="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-700 px-8 py-12 text-center shadow-2xl shadow-blue-900/30 sm:px-12"
       >
-        tochsothak82@gmail.com
-      </a>
+        <div
+          class="animate-blob pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-cyan-400/30 blur-3xl"
+        ></div>
+        <h2 class="relative mb-3 text-3xl font-extrabold tracking-tight text-white">
+          Let's build something great
+        </h2>
+        <p class="relative mx-auto mb-8 max-w-lg leading-relaxed text-blue-100">
+          Open to junior backend / mobile developer roles and freelance work. The fastest
+          way to reach me is email.
+        </p>
+        <a
+          href="mailto:tochsothak82@gmail.com"
+          class="relative inline-block rounded-full bg-white px-7 py-3.5 text-sm font-bold text-blue-950 shadow-lg transition hover:scale-105"
+        >
+          tochsothak82@gmail.com
+        </a>
+      </div>
+      <footer class="py-10 text-center text-sm text-slate-400">
+        © Toch Sothak — Built with Astro &amp; Tailwind CSS
+      </footer>
     </section>
-
-    <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-400">
-      © Toch Sothak — Built with Astro &amp; Tailwind CSS
-    </footer>
   </main>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.15 },
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
 </Layout>
