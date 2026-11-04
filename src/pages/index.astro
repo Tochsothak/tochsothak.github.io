@@ -3,12 +3,19 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+  <!-- Scroll progress -->
+  <div
+    id="scroll-progress"
+    class="fixed inset-x-0 top-0 z-30 h-1 origin-left scale-x-0 bg-gradient-to-r from-blue-700 to-cyan-400"
+  ></div>
+
   <!-- Glass nav -->
   <header class="fixed inset-x-0 top-0 z-20 border-b border-white/40 bg-white/70 backdrop-blur-lg">
     <div class="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
       <a href="#" class="text-lg font-extrabold tracking-wide text-blue-950">TOCH SOTHAK</a>
       <nav class="hidden gap-6 text-sm font-medium text-slate-600 sm:flex">
         <a href="#experience" class="transition hover:text-blue-700">Experience</a>
+        <a href="#production" class="transition hover:text-blue-700">Production</a>
         <a href="#projects" class="transition hover:text-blue-700">Projects</a>
         <a href="#skills" class="transition hover:text-blue-700">Skills</a>
         <a href="#contact" class="transition hover:text-blue-700">Contact</a>
@@ -31,6 +38,10 @@ import Layout from '../layouts/Layout.astro';
       <div
         class="animate-blob pointer-events-none absolute top-40 -right-24 h-96 w-96 rounded-full bg-cyan-300/40 blur-3xl"
         style="animation-delay: -6s"
+      ></div>
+      <div
+        class="pointer-events-none absolute inset-0 opacity-60"
+        style="background-image: radial-gradient(circle, rgb(37 99 235 / 0.10) 1px, transparent 1px); background-size: 22px 22px; mask-image: radial-gradient(ellipse 75% 60% at 50% 0%, black 20%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 0%, black 20%, transparent 75%);"
       ></div>
 
       <div
@@ -70,6 +81,14 @@ import Layout from '../layouts/Layout.astro';
               class="rounded-full border border-slate-300 bg-white/80 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur transition hover:scale-105 hover:border-blue-900 hover:text-blue-900"
             >
               Download CV
+            </a>
+            <a
+              href="https://github.com/tochsothak"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded-full border border-slate-300 bg-white/80 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur transition hover:scale-105 hover:border-blue-900 hover:text-blue-900"
+            >
+              GitHub
             </a>
           </div>
         </div>
@@ -129,6 +148,90 @@ import Layout from '../layouts/Layout.astro';
             with POS and inventory), Maxx POS Order, FlipFlop social media, and ERP modules.
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Production work -->
+    <section id="production" class="reveal mx-auto max-w-5xl scroll-mt-24 px-5 py-16">
+      <p class="mb-2 text-sm font-bold tracking-widest text-blue-700 uppercase">
+        At Maxx Business Software
+      </p>
+      <h2 class="mb-8 text-3xl font-extrabold tracking-tight text-slate-900">
+        Production work
+      </h2>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
+          <h3 class="mb-1 text-lg font-bold text-slate-900">ESS Online</h3>
+          <p class="mb-3 text-sm font-medium text-blue-800">HRMS · Flutter + PHP APIs</p>
+          <p class="leading-relaxed text-slate-600">
+            Employee self-service app: attendance, leave, overtime and timesheets, from API
+            integration through to UAT and production release builds.
+          </p>
+        </article>
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
+          <h3 class="mb-1 text-lg font-bold text-slate-900">ESS MJQE</h3>
+          <p class="mb-3 text-sm font-medium text-blue-800">HRMS · Flutter + PHP APIs</p>
+          <p class="leading-relaxed text-slate-600">
+            MJQE edition of the HRMS self-service app, shipped as UAT and production
+            Flutter builds.
+          </p>
+        </article>
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
+          <h3 class="mb-1 text-lg font-bold text-slate-900">Moow Online</h3>
+          <p class="mb-3 text-sm font-medium text-blue-800">
+            Live-selling &amp; shop · Flutter + PHP APIs
+          </p>
+          <p class="leading-relaxed text-slate-600">
+            Facebook live-selling and shop app with POS and inventory features.
+          </p>
+        </article>
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
+          <h3 class="mb-1 text-lg font-bold text-slate-900">Maxx POS Order</h3>
+          <p class="mb-3 text-sm font-medium text-blue-800">POS · Flutter + PHP APIs</p>
+          <p class="leading-relaxed text-slate-600">Point-of-sale ordering app.</p>
+        </article>
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
+          <h3 class="mb-1 text-lg font-bold text-slate-900">FlipFlop</h3>
+          <p class="mb-3 text-sm font-medium text-blue-800">Social · Flutter + PHP APIs</p>
+          <p class="leading-relaxed text-slate-600">Cambodian social media platform.</p>
+        </article>
+        <article
+          class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <div
+            class="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-blue-700 to-cyan-400 transition-all duration-300 group-hover:w-20"
+          ></div>
+          <h3 class="mb-1 text-lg font-bold text-slate-900">ERP modules</h3>
+          <p class="mb-3 text-sm font-medium text-blue-800">ERP · PHP APIs</p>
+          <p class="leading-relaxed text-slate-600">
+            ERP modules powering business operations.
+          </p>
+        </article>
       </div>
     </section>
 
@@ -243,8 +346,30 @@ import Layout from '../layouts/Layout.astro';
         >
           +855884788421
         </a>
+        <a
+          href="https://github.com/tochsothak"
+          target="_blank"
+          rel="noreferrer"
+          class="relative ml-3 inline-block rounded-full border border-white/40 px-7 py-3.5 text-sm font-bold text-white transition hover:scale-105"
+        >
+          GitHub
+        </a>
       </div>
       <footer class="py-10 text-center text-sm text-slate-400">
+        <p class="mb-2 flex items-center justify-center gap-4">
+          <a
+            href="https://github.com/tochsothak"
+            target="_blank"
+            rel="noreferrer"
+            class="transition hover:text-blue-700"
+          >
+            GitHub
+          </a>
+          <a href="mailto:tochsothak882@gmail.com" class="transition hover:text-blue-700">
+            Email
+          </a>
+          <a href="tel:+855884788421" class="transition hover:text-blue-700">Phone</a>
+        </p>
         © Toch Sothak — Built with Astro &amp; Tailwind CSS
       </footer>
     </section>
@@ -263,5 +388,13 @@ import Layout from '../layouts/Layout.astro';
       { threshold: 0.15 },
     );
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
   </script>
 </Layout>
