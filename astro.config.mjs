@@ -1,14 +1,13 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// GitHub published this site at the subpath /tochsothak.github.io/
-// (see Settings -> Pages: "Your site is live at
-// https://tochsothak.github.io/tochsothak.github.io/"), so all asset
-// paths must be prefixed with that base, otherwise the CSS and photo
-// 404 and the page looks unstyled.
+// This is a user site: the repo is named exactly <username>.github.io,
+// so GitHub serves it at the domain root (https://tochsothak.github.io/)
+// and all asset paths must be root-absolute. Do NOT set a subpath base
+// here — a base of '/tochsothak.github.io/' is only for project sites.
 export default defineConfig({
   site: 'https://tochsothak.github.io',
-  base: '/tochsothak.github.io/',
+  base: '/',
   vite: {
     plugins: [tailwindcss()],
   },
